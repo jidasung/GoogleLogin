@@ -1,5 +1,16 @@
 package com.jidasung.googlelogintestproject;
 
+/*
+ * Author : Hyeong Gyu Jeong
+ * Blog : jidasung.com
+ * Git : /jidasung
+ * 
+ * Project : Google Login on Android
+ * Description : Sign in with google, Get profile information from google
+ * 
+ * */
+
+
 import java.io.InputStream;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
@@ -59,9 +70,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Conn
 		profileImage = (ImageView)findViewById(R.id.imageView1);
 		findViewById(R.id.sign_in_button).setOnClickListener(this);
 		findViewById(R.id.sign_out_button).setOnClickListener(this);
-		
-//		signinbutton = (SignInButton)findViewById(R.id.sign_in_button);
-//		signinbutton.setOnClickListener(this);
+
 	}
 
 	@Override
@@ -164,14 +173,12 @@ public class MainActivity extends Activity implements View.OnClickListener, Conn
 
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
 		super.onStart();
 		mPlusClient.connect();
 	}
 
 	@Override
 	protected void onStop() {
-		// TODO Auto-generated method stub
 		super.onStop();
 		mPlusClient.disconnect();
 	}
